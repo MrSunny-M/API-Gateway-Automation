@@ -5,7 +5,7 @@ This module is to creates DNS records(A Record, CNAME) in Route53 zone.
 
 # Code
 
-```
+```yaml
 module "records" {
   source  = "terraform-aws-modules/route53/aws//modules/records"
   version = "~> 2.0"
@@ -37,8 +37,8 @@ module "records" {
 To run this example you need to execute:
 
 
-`$ terraform init
-$ terraform plan
-$ terraform apply`
+`$ terraform init`
+`$ terraform plan`
+`$ terraform apply`
 
 Run `terraform destroy` when you don't need these resources.
