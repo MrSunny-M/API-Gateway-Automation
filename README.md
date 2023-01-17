@@ -5,7 +5,7 @@ This module is to creates DNS records(A Record, CNAME) in Route53 zone.
 
 # Code
 
-```yaml
+```hcl
 module "records" {
   source  = "terraform-aws-modules/route53/aws//modules/records"
   version = "~> 2.0"
