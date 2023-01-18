@@ -7,17 +7,17 @@ This module is to creates DNS records(A Record, CNAME) in Route53 zone.
 
 ```hcl
 module "records" {
-  source  = "terraform-aws-modules/route53/aws//modules/records"
+  source  = "route53/modules/records"
   version = "~> 2.0"
 
   zone_name = keys(module.zones.route53_zone_zone_id)[0]
 
   records = [
     {
-      name    = "apigateway-a"
+      name    = "apigateway-b"
       type    = "A"
       alias   = {
-        name    = "mrsunny-m.example-api.eu-west-1.amazonaws.com"
+        name    = "cluster-b.example-api.eu-west-1.amazonaws.com"
         zone_id = "********"
       }
     },
