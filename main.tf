@@ -4,3 +4,4 @@ resource "aws_route53_record" "testing" {
   type    = var.type
   ttl     = var.ttl
   records = ["cname.testing.com"]
+}
