@@ -5,7 +5,8 @@ provider "aws" {
   access_key = "AWS_ACCESS_KEY"
   secret_key = "AWS_SECRET_KEY"
   
-    sts_regional_endpoints = "regional"
+  sts_regional_endpoints = "regional"
+  endpoint = "sts.us-east-1.amazonaws.com"
 #  }
 #  shared_credentials_file = "~/.aws/credentials"
 }
