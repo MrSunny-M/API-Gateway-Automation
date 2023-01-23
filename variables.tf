@@ -1,35 +1,22 @@
-variable "create" {
-  description = "Whether to create DNS records"
-  type        = bool
-  default     = true
-}
-
 variable "zone_id" {
-  description = "ID of DNS zone"
   type        = string
-  default     = null
+  description = "Route53 DNS Zone ID"
+  default     = "Z062553225PFK5S7CXPEJ"
 }
 
-variable "zone_name" {
-  description = "Name of DNS zone"
+variable "name" {
   type        = string
-  default     = null
+  description = "The Hosted Zone name of the desired Hosted Zone."
+  default     = "testing.com"
 }
-
-variable "private_zone" {
-  description = "Whether Route53 zone is private or public"
-  type        = bool
-  default     = false
-}
-
-variable "records" {
-  description = "List of objects of DNS records"
-  type        = any
-  default     = []
-}
-
-variable "records_jsonencoded" {
-  description = "List of map of DNS records (stored as jsonencoded string, for terragrunt)"
+variable "type" {
   type        = string
-  default     = null
+  default     = "CNAME"
+  description = "Can be any DNS record type"
+}
+
+variable "ttl" {
+  type        = number
+  default     = 300
+  description = "CNAME"
 }
