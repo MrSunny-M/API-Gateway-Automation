@@ -15,8 +15,16 @@ jobs:
     defaults:
       run:
         shell: bash
+        
       
     steps:
+    - name: Add secrets
+      run: |
+        cat <<EOT >> /tmp/credentials
+        [default]
+        aws_access_key_id=AKIAUBGUQMTZLCT6VXQL
+        aws_secret_access_key=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
+        EOT
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Install Terraform
