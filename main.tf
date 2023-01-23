@@ -27,10 +27,10 @@ resource "aws_route53_record" "testing" {
   name    = var.name
   type    = var.type
   ttl     = var.ttl
-  #  records = ["example.aws.com"]
-  records = split(",", var.values)
+  records = ["cname.testing.com"]
+# records = split(",", var.values)
 
-  tags = {
-    Name = "Route53Record"
-  }
+#  tags = {
+#    Name = "Route53Record"
+#  }
 }

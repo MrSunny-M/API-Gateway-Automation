@@ -1,16 +1,9 @@
 provider "aws" {
   region = "us-east-1"
 #  assume_role {
-#    role_arn     = "arn:aws:iam::ACCOUNT_ID:role/ROLE_NAME"
-  access_key = "ACCESS_KEY"
-  secret_key = "SECRET_KEY"
-  }
-}
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.50.0"
-    }
-  }
+#    role_arn = "arn:aws:iam::277471061234:user/terraform"
+#  access_key = "AWS_ACCESS_KEY_ID"
+#  secret_key = "AWS_SECRET_ACCESS_KEY"
+#  }
+  shared_credentials_file = "~/.aws/credentials"
 }
