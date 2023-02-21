@@ -4,7 +4,7 @@ variable "zone_id" {
   default     = "Z062553225PFK5S7CXPEJ"
 }
 
-variable "zone_name" {
+variable "name" {
   type        = string
   description = "The Hosted Zone name of the desired Hosted Zone."
   default     = "testing.com"
